@@ -1,7 +1,9 @@
 {
+  "buildCommand": "echo 'No build needed'",
+  "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/",
+      "source": "/(.*)",
       "destination": "/joshua_bermas_portfolio_v3.html"
     }
   ]
