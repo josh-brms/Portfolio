@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/joshua_bermas_portfolio_v3.html"
+      "destination": "/my_portfolio.html"
     }
   ]
 }
