@@ -73,7 +73,7 @@ function Knot({ color }: { color: string }) {
   return (
     <mesh ref={ref}>
       <torusKnotGeometry args={[1.05, 0.28, 150, 18]} />
-      <meshBasicMaterial wireframe transparent opacity={0.13} color={color} />
+      <meshBasicMaterial wireframe transparent opacity={0.1} color={color} />
     </mesh>
   );
 }
@@ -93,8 +93,8 @@ function Rig({ children }: { children: React.ReactNode }) {
 }
 
 export default function HeroScene({ theme }: { theme: "dark" | "light" }) {
-  const mainColor = theme === "light" ? "#6b58f0" : "#a594ff";
-  const softColor = theme === "light" ? "#c02f8f" : "#f472b6";
+  const mainColor = theme === "light" ? "#27272a" : "#d4d4d8";
+  const softColor = theme === "light" ? "#a1a1aa" : "#52525b";
 
   return (
     <Canvas

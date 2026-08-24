@@ -8,7 +8,7 @@ import { SectionHeading } from "@/components/section-heading";
 import { SpotlightCard } from "@/components/spotlight-card";
 
 const DOT_BG: Record<AccentToken, string> = {
-  accent: "bg-accent shadow-[0_0_0_4px_var(--accent)]",
+  accent: "bg-foreground shadow-[0_0_0_4px_var(--fg)]",
   accent2: "bg-accent2 shadow-[0_0_0_4px_var(--accent2)]",
   gold: "bg-gold shadow-[0_0_0_4px_var(--gold)]",
   teal: "bg-teal shadow-[0_0_0_4px_var(--teal)]",
@@ -29,6 +29,7 @@ export function Timeline() {
     <section id="journey" className="py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-5">
         <SectionHeading
+          index={5}
           align="center"
           eyebrow="My Journey"
           titleLines={["How I got here."]}
@@ -39,15 +40,15 @@ export function Timeline() {
           <div className="absolute bottom-0 left-[22px] top-0 w-px bg-line md:left-1/2" />
           <motion.div
             style={{ scaleY }}
-            className="absolute bottom-0 left-[22px] top-0 w-px origin-top bg-gradient-to-b from-accent via-orchid to-teal md:left-1/2"
+            className="absolute bottom-0 left-[22px] top-0 w-px origin-top bg-gradient-to-b from-foreground via-muted to-faint md:left-1/2"
           />
 
           {TIMELINE.map((entry, i) => {
             const leftSide = i % 2 === 0;
             return (
-              <div key={entry.year} className="relative mb-12 last:mb-0">
+              <div key={entry.year} className="relative mb-10 last:mb-0">
                 <span
-                  className={`absolute left-[22px] top-7 h-3.5 w-3.5 -translate-x-1/2 rounded-full border-[3px] border-background md:left-1/2 ${
+                  className={`absolute left-[22px] top-7 h-3 w-3 -translate-x-1/2 rounded-full border-[3px] border-background md:left-1/2 ${
                     DOT_BG[entry.token]
                   }`}
                 />
@@ -63,17 +64,17 @@ export function Timeline() {
                       leftSide ? "md:mr-auto" : "md:ml-auto"
                     }`}
                   >
-                    <SpotlightCard className="rounded-2xl border border-line bg-surface p-6 transition-colors duration-300 hover:border-line-strong">
-                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent2">
+                    <SpotlightCard className="rounded-lg border border-line bg-surface p-6 transition-colors duration-300 hover:border-line-strong">
+                      <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-muted">
                         {entry.year}
                       </p>
-                      <h3 className="mt-1 font-display text-lg font-bold">
+                      <h3 className="mt-1.5 font-display text-lg font-bold">
                         {entry.title}
                       </h3>
-                      <p className="mt-0.5 text-sm italic text-muted">
+                      <p className="mt-0.5 font-mono text-xs text-faint">
                         {entry.sub}
                       </p>
-                      <p className="mt-2.5 text-sm leading-relaxed text-muted">
+                      <p className="mt-3 text-sm leading-relaxed text-muted">
                         {entry.desc}
                       </p>
                     </SpotlightCard>

@@ -10,6 +10,8 @@ import {
   MonitorSmartphone,
   ServerCog,
   Wrench,
+  BookOpen,
+  Fingerprint,
 } from "lucide-react";
 
 export const SITE = {
@@ -163,7 +165,7 @@ export const FEATURED_PROJECT = {
 };
 
 export interface SmallProject {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   desc: string;
   tech: string[];
@@ -173,7 +175,7 @@ export interface SmallProject {
 
 export const SMALL_PROJECTS: SmallProject[] = [
   {
-    icon: "📚",
+    icon: BookOpen,
     title: "STMS — Student Task Management",
     desc: "Full-stack academic task manager with JWT auth, role-based access for students & admins, real-time status updates, and PostgreSQL RLS policies. Built for CSPC 321 – Software Engineering.",
     tech: ["React 18", "TypeScript", "Supabase", "Vite", "PostgreSQL"],
@@ -190,7 +192,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
     ],
   },
   {
-    icon: "🎨",
+    icon: Fingerprint,
     title: "Personal Portfolio Website",
     desc: "You're looking at it — rebuilt with Next.js 15, an interactive WebGL hero, a ⌘K command palette, and physics-based motion. Theme-aware down to the particles.",
     tech: ["Next.js 15", "Three.js", "Motion", "Tailwind v4"],

@@ -4,45 +4,45 @@
 
 :root,
 :root[data-theme="dark"] {
-  --bg: #07070d;
-  --bg2: #0d0d17;
-  --bg3: #151522;
-  --surface: #11111d;
-  --line: #23233c;
-  --line-strong: #35355c;
-  --fg: #f1f1fa;
-  --muted: #a3a3ca;
-  --faint: #63639c;
-  --accent: #7c6af7;
-  --accent2: #a594ff;
-  --accent3: #c4b8ff;
-  --gold: #f5c842;
-  --teal: #3ecfb0;
-  --coral: #ff6b6b;
-  --green: #4ade80;
-  --orchid: #f472b6;
-  --nav-bg: rgba(7, 7, 13, 0.82);
+  --bg: #09090b;
+  --bg2: #0c0c0e;
+  --bg3: #161619;
+  --surface: #101013;
+  --line: #1f1f23;
+  --line-strong: #2e2e33;
+  --fg: #fafafa;
+  --muted: #a1a1aa;
+  --faint: #6b6b74;
+  --accent: #fafafa;
+  --accent2: #d4d4d8;
+  --accent3: #a1a1aa;
+  --gold: #a1a1aa;
+  --teal: #d4d4d8;
+  --coral: #52525b;
+  --green: #e4e4e7;
+  --orchid: #71717a;
+  --nav-bg: rgba(9, 9, 11, 0.82);
 }
 
 [data-theme="light"] {
-  --bg: #f5f4fe;
-  --bg2: #edecfb;
-  --bg3: #e3e1f7;
+  --bg: #fafafa;
+  --bg2: #f4f4f5;
+  --bg3: #e9e9ec;
   --surface: #ffffff;
-  --line: #dcd8f0;
-  --line-strong: #bdb6e4;
-  --fg: #141122;
-  --muted: #4d4974;
-  --faint: #8b86ba;
-  --accent: #6b58f0;
-  --accent2: #7c6af7;
-  --accent3: #5646d6;
-  --gold: #a3790a;
-  --teal: #12967f;
-  --coral: #d43d3d;
-  --green: #1f9d51;
-  --orchid: #c02f8f;
-  --nav-bg: rgba(245, 244, 254, 0.85);
+  --line: #e4e4e7;
+  --line-strong: #c9c9cf;
+  --fg: #111113;
+  --muted: #52525b;
+  --faint: #8e8e96;
+  --accent: #111113;
+  --accent2: #3f3f46;
+  --accent3: #52525b;
+  --gold: #71717a;
+  --teal: #3f3f46;
+  --coral: #a1a1aa;
+  --green: #18181b;
+  --orchid: #52525b;
+  --nav-bg: rgba(250, 250, 250, 0.85);
 }
 
 @theme inline {
@@ -66,6 +66,7 @@
 
   --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-dm), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", monospace;
 
   --animate-marquee: marquee 38s linear infinite;
   --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
@@ -115,7 +116,7 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #fff;
+  color: var(--bg);
 }
 
 ::-webkit-scrollbar {
@@ -126,7 +127,7 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: var(--line-strong);
-  border-radius: 8px;
+  border-radius: 0;
   border: 2px solid var(--bg);
 }
 
@@ -144,21 +145,22 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.9rem;
+  padding: 0.8rem 1.75rem;
   background: var(--accent);
-  color: #fff;
-  border-radius: 100px;
-  font-size: 0.925rem;
+  color: var(--bg);
+  border-radius: 8px;
+  font-size: 0.875rem;
   font-weight: 500;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  border: none;
+  border: 1px solid var(--accent);
   transition:
-    background-color 0.25s,
-    box-shadow 0.25s;
+    opacity 0.2s,
+    box-shadow 0.2s;
 }
 .btn-primary:hover {
-  background: var(--accent2);
-  box-shadow: 0 10px 34px var(--glow, rgba(124, 106, 247, 0.35));
+  opacity: 0.85;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 15%, transparent);
 }
 
 .btn-ghost {
@@ -166,31 +168,32 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.85rem 1.9rem;
+  padding: 0.8rem 1.75rem;
   background: transparent;
   color: var(--fg);
   border: 1px solid var(--line-strong);
-  border-radius: 100px;
-  font-size: 0.925rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
   font-weight: 500;
+  letter-spacing: 0.01em;
   text-decoration: none;
   transition:
-    border-color 0.25s,
-    color 0.25s,
-    transform 0.25s;
+    border-color 0.2s,
+    color 0.2s,
+    transform 0.2s;
 }
 .btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent3);
+  border-color: var(--accent3);
+  color: var(--accent);
   transform: translateY(-2px);
 }
 
 .text-gradient {
   background: linear-gradient(
-    120deg,
-    var(--accent2) 0%,
-    var(--orchid) 50%,
-    var(--teal) 100%
+    115deg,
+    var(--fg) 0%,
+    var(--accent3) 55%,
+    var(--faint) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -229,7 +232,7 @@ body {
   transition: opacity 0.35s ease;
   background: radial-gradient(
     340px circle at var(--mx, 50%) var(--my, 50%),
-    color-mix(in oklab, var(--accent) 13%, transparent),
+    color-mix(in oklab, var(--fg) 7%, transparent),
     transparent 65%
   );
 }

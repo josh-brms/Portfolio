@@ -7,12 +7,17 @@ import { Magnetic } from "@/components/magnetic";
 
 export function Cta() {
   return (
-    <section id="cta" className="relative overflow-hidden py-28 md:py-36">
+    <section id="cta" className="relative overflow-hidden border-t border-line py-28 md:py-36">
       <div className="absolute inset-0 bg-grid-fade opacity-50" />
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/[0.07] blur-[120px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[560px] w-[560px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground/[0.035] blur-[120px]" />
 
       <div className="relative mx-auto max-w-3xl px-5 text-center">
         <Reveal>
+          <p className="mb-4 font-mono text-[11px] uppercase tracking-[0.22em] text-faint">
+            <span className="text-foreground">06</span>{" "}
+            <span className="text-line-strong">/</span>
+            Next step
+          </p>
           <h2 className="font-display text-[clamp(2.4rem,5vw,4rem)] font-extrabold leading-[1.05] tracking-tight">
             Let&apos;s build something
             <span className="text-gradient block">great together.</span>
@@ -29,7 +34,7 @@ export function Cta() {
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <Magnetic>
               <a href="#contact" className="btn-primary">
-                Get in Touch <ArrowRight size={16} />
+                Get in Touch <ArrowRight size={15} />
               </a>
             </Magnetic>
             <Magnetic>
@@ -38,7 +43,7 @@ export function Cta() {
                 download="Joshua_Bermas_Resume.pdf"
                 className="btn-ghost"
               >
-                <Download size={16} /> Download Resume
+                <Download size={15} /> Download Resume
               </a>
             </Magnetic>
           </div>

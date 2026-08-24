@@ -46,8 +46,8 @@ export function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-28"
     >
-      <div className="pointer-events-none absolute -left-40 top-[-120px] h-[480px] w-[480px] rounded-full bg-accent/10 blur-[110px]" />
-      <div className="pointer-events-none absolute -right-32 bottom-[-140px] h-[420px] w-[420px] rounded-full bg-orchid/[0.07] blur-[110px]" />
+      <div className="pointer-events-none absolute -left-40 top-[-120px] h-[480px] w-[480px] rounded-full bg-foreground/[0.04] blur-[110px]" />
+      <div className="pointer-events-none absolute -right-32 bottom-[-140px] h-[420px] w-[420px] rounded-full bg-foreground/[0.03] blur-[110px]" />
       <div className="absolute inset-0 bg-grid-fade opacity-60" />
 
       {!reduce && sceneOk && (
@@ -62,9 +62,9 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-14 px-5 lg:grid-cols-[1.15fr_.85fr]">
         <div>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/10 px-4 py-1.5 text-[13px] text-accent3">
-            <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-green" />
-            Open to opportunities · Albay, Philippines
+          <div className="mb-6 inline-flex items-center gap-2.5 rounded-md border border-line bg-background2 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+            <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-foreground" />
+            Open to opportunities — Albay, PH
           </div>
 
           <h1 className="font-display text-[clamp(3rem,7vw,5.6rem)] font-extrabold leading-[0.95] tracking-tight">
@@ -72,12 +72,13 @@ export function Hero() {
             <span className="text-gradient block">Bermas</span>
           </h1>
 
-          <p className="mt-4 flex h-9 items-center gap-1 font-display text-xl text-muted md:text-2xl">
+          <p className="mt-5 flex h-8 items-center gap-2.5 font-mono text-lg text-muted md:text-xl">
+            <span className="text-faint select-none">&gt;</span>
             <TypingText />
-            <span className="inline-block h-6 w-[2px] animate-blink bg-accent2" />
+            <span className="inline-block h-5 w-[2px] animate-blink bg-foreground" />
           </p>
 
-          <p className="mt-4 max-w-xl font-light leading-relaxed text-muted">
+          <p className="mt-5 max-w-xl font-light leading-relaxed text-muted">
             I build fast, intuitive, and user-centered digital experiences.
             Currently seeking entry-level web development roles where I can
             ship clean code and delightful products.
@@ -86,7 +87,7 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Magnetic>
               <a href="#projects" className="btn-primary">
-                View My Work <ArrowRight size={16} />
+                View My Work <ArrowRight size={15} />
               </a>
             </Magnetic>
             <Magnetic>
@@ -95,12 +96,12 @@ export function Hero() {
                 download="Joshua_Bermas_Resume.pdf"
                 className="btn-ghost"
               >
-                <Download size={16} /> Download Resume
+                <Download size={15} /> Download Resume
               </a>
             </Magnetic>
           </div>
 
-          <div className="mt-12 flex gap-9">
+          <div className="mt-12 flex gap-10 border-t border-line pt-8">
             {HERO_STATS.map((s) => (
               <div key={s.label}>
                 <AnimatedNumber
@@ -108,7 +109,7 @@ export function Hero() {
                   suffix={s.suffix}
                   className="font-display text-3xl font-extrabold tracking-tight"
                 />
-                <div className="mt-1 text-xs uppercase tracking-wider text-faint">
+                <div className="mt-1 font-mono text-[10px] uppercase tracking-[0.16em] text-faint">
                   {s.label}
                 </div>
               </div>
@@ -117,23 +118,21 @@ export function Hero() {
         </div>
 
         <TiltCard maxAngle={6}>
-          <SpotlightCard className="rounded-3xl border border-line bg-surface/75 p-8 backdrop-blur-md">
-            <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-accent via-orchid to-teal p-[2px]">
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-surface font-display text-3xl font-extrabold text-accent2">
-                JB
-              </div>
+          <SpotlightCard className="rounded-lg border border-line bg-surface/80 p-8 backdrop-blur-md">
+            <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight">
+              JB
             </div>
             <p className="text-center font-display text-lg font-bold">
               Joshua Bermas
             </p>
-            <p className="mb-6 text-center text-sm text-muted">
-              Full-Stack Developer · Albay, PH
+            <p className="mt-0.5 text-center font-mono text-xs text-muted">
+              full-stack developer · albay, ph
             </p>
-            <div className="mb-6 flex flex-wrap justify-center gap-2">
+            <div className="mb-6 mt-6 flex flex-wrap justify-center gap-2">
               {HERO_SKILLS.map((skill, i) => (
                 <span
                   key={skill}
-                  className={`rounded-full border px-2.5 py-1 text-xs font-medium ${
+                  className={`rounded-md border px-2.5 py-1 font-mono text-[11px] ${
                     PILL_STYLES[
                       HERO_SKILL_TOKENS[i % HERO_SKILL_TOKENS.length]
                     ]
@@ -143,8 +142,8 @@ export function Hero() {
                 </span>
               ))}
             </div>
-            <div className="flex items-center justify-center gap-2 rounded-xl border border-green/15 bg-green/[0.07] px-4 py-3 text-sm text-green">
-              <span className="h-[7px] w-[7px] animate-pulse-dot rounded-full bg-green" />
+            <div className="flex items-center justify-center gap-2 rounded-md border border-line bg-background3 px-4 py-3 font-mono text-[11px] uppercase tracking-[0.14em] text-accent3">
+              <span className="h-[6px] w-[6px] animate-pulse-dot rounded-full bg-foreground" />
               Available for work · 2026
             </div>
           </SpotlightCard>
@@ -154,12 +153,14 @@ export function Hero() {
       <a
         href="#about"
         aria-label="Scroll to about section"
-        className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-faint transition-colors hover:text-accent2 md:flex"
+        className="absolute bottom-7 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-faint transition-colors hover:text-foreground md:flex"
       >
-        <span className="flex h-9 w-6 justify-center rounded-full border-2 border-current pt-1.5">
-          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-accent2" />
+        <span className="flex h-9 w-6 justify-center rounded-full border border-current pt-1.5">
+          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-foreground" />
         </span>
-        <span className="text-[10px] uppercase tracking-[0.2em]">Scroll</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
+          Scroll
+        </span>
       </a>
     </section>
   );
