@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-blond-xi-29.vercel.app"),
+  metadataBase: new URL("https://myportfolio-orpin-theta-scrdgolhpn.vercel.app"),
   title: {
     default: "Joshua Bermas — Full-Stack Developer",
     template: "%s — Joshua Bermas",

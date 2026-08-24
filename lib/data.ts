@@ -196,7 +196,7 @@ export const SMALL_PROJECTS: SmallProject[] = [
     tech: ["Next.js 15", "Three.js", "Motion", "Tailwind v4"],
     techTokens: ["accent", "teal", "orchid", "green"],
     links: [
-      { label: "Live Site", href: "https://portfolio-blond-xi-29.vercel.app" },
+      { label: "Live Site", href: "https://myportfolio-orpin-theta-scrdgolhpn.vercel.app" },
       { label: "GitHub", href: "https://github.com/josh-brms/Portfolio" },
     ],
   },
