@@ -1,0 +1,45 @@
+JOSHUA BERMAS
+09958924067 • bermasjoshua12345@gmail.com • github.com/josh-brms • Legazpi, Albay, Philippines
+
+EDUCATION
+Divine Word College of Legazpi
+Bachelor of Science in Computer Science | Albay, Bicol Region, Philippines
+
+PROJECT EXPERIENCE
+Hotel Rex Management System
+Full-Stack Developer | Personal Web Development Project
+Designed and developed a full-stack hotel operations platform covering room bookings, guest check-in/check-out, and
+real-time availability tracking.
+Implemented secure user authentication, admin dashboards, and customer data management panels.
+Built intuitive front-end interfaces that improved navigation and minimized booking errors.
+Integrated backend logic for automated notifications, report generation, and automated reporting.
+Tech: Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Recharts, date-fns, Lucide React
+github.com/josh-brms/hotelrexmanagement • hotelrexmanagement.vercel.app
+
+STMS — Student Task Management System
+Full-Stack Developer | CSPC 321 – Software Engineering (Group 3)
+Built a full-stack academic task management system with role-based access for students and admins.
+Implemented secure JWT-based authentication via Supabase Auth with Row Level Security policies.
+Enabled students to create, prioritize, and track academic tasks (assignments, quizzes, projects) with real-time status
+updates.
+Developed an admin panel for cross-student task oversight and user account management.
+Designed PostgreSQL schema with RLS policies; deployed live on Vercel.
+Tech: React 18, TypeScript, Tailwind CSS, Supabase (PostgreSQL + Auth), React Router v6, Vite, Lucide React
+github.com/josh-brms/Student_Management_System-1 • student-management-system-1-ten.vercel.app
+
+Personal Portfolio Website
+Frontend Developer | Personal Project
+Designed and built a personal portfolio website to showcase projects and technical skills.
+Crafted a clean, responsive UI using HTML and CSS.
+github.com/josh-brms/Portfolio
+
+SKILLS & INTERESTS
+Tools & Platforms: VS Code, Vercel, Supabase, GitHub, PostgreSQL, Vite, CRM Systems, Web
+Application Troubleshooting
+Technical: Next.js, React, TypeScript, Tailwind CSS, Supabase, PostgreSQL, Vite, Git & GitHub, UI Design, Data Management
+Soft Skills: Problem Solving, Team Collaboration, Attention to Detail
+Languages: Bilingual — English & Filipino
+Interests: Continuous learning in new tech (AI, cloud), Building user-friendly digital experiences, Problem-solving and
+innovation, Cross-cultural communication
+
+
