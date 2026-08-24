@@ -26,6 +26,7 @@ export const SITE = {
   github: "https://github.com/josh-brms",
   githubHandle: "@josh-brms",
   resume: "/my_resume.pdf",
+  resumeTagline: "Full-Stack Developer Resume",
 };
 
 export type AccentToken =
