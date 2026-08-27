@@ -119,8 +119,12 @@ export function Hero() {
 
         <TiltCard maxAngle={6}>
           <SpotlightCard className="rounded-lg border border-line bg-surface/80 p-8 backdrop-blur-md">
-            <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight">
-              JB
+            <div className="mx-auto mb-5 flex h-24 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight relative group">
+              <img
+                src="/profile.jpg"
+                alt="JoshStudio"
+                className="h-full w-full rounded-lg object-cover transition-all duration-500 ease-out group-hover:scale-[2.2] group-hover:rounded-none group-hover:z-10 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] group-hover:rotate-[-2deg]"
+              />
             </div>
             <p className="text-center font-display text-lg font-bold">
               Joshua Bermas

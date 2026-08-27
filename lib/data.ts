@@ -20,7 +20,7 @@ export const SITE = {
   lastName: "Bermas",
   role: "Full-Stack Developer",
   location: "Albay, Philippines",
-  email: "bermasjoshua12345@gmail.com",
+  email: "joshuabermasworks@gmail.com",
   phoneDisplay: "0995 892 4067",
   phoneHref: "tel:+639958924067",
   github: "https://github.com/josh-brms",

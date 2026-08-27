@@ -52,10 +52,16 @@ export function Nav() {
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-display text-xl font-extrabold tracking-tight"
+            className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight"
             aria-label="Back to top"
           >
-            JB<span className="text-accent2">.</span>
+            <img
+              src="/logo.png"
+              alt="JoshStudio"
+              className="h-10 w-10 object-contain"
+            />
+            <span className="text-accent2">.</span>
+            <span>JoshStudio</span>
           </button>
 
           <ul className="hidden items-center gap-7 md:flex">

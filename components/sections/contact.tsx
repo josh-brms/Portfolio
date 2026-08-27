@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import type { FormEvent } from "react";
-import { Check, Github, Mail, MapPin, Phone, Send } from "lucide-react";
-import { CONTACT_METHODS, SITE } from "@/lib/data";
+import { Check, Github, Mail, MapPin, Phone, Send, Loader2 } from "lucide-react";
+import { CONTACT_METHODS } from "@/lib/data";
 import { SectionHeading } from "@/components/section-heading";
 import { Reveal } from "@/components/reveal";
 
@@ -21,8 +21,9 @@ export function Contact() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const onSubmit = (e: FormEvent) => {
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) {
       setError("Please fill in your name and a message.");
@@ -33,13 +34,29 @@ export function Contact() {
       return;
     }
     setError("");
+    setLoading(true);
 
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `${message}\n\n— ${name}\n${email}${role ? `\nRole: ${role}` : ""}`
-    );
-    window.location.href = `mailto:${SITE.email}?subject=${subject}&body=${body}`;
-    setSent(true);
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, role, message }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSent(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const reset = () => {
@@ -48,6 +65,7 @@ export function Contact() {
     setRole("");
     setMessage("");
     setSent(false);
+    setError("");
   };
 
   const inputCls =
@@ -110,17 +128,10 @@ export function Contact() {
                   <Check size={20} className="text-foreground" />
                 </span>
                 <h3 className="font-display text-xl font-bold">
-                  Your email draft is ready
+                  Message sent successfully
                 </h3>
                 <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
-                  If your mail app didn&apos;t open automatically, write me
-                  directly at{" "}
-                  <a
-                    href={`mailto:${SITE.email}`}
-                    className="font-mono text-[13px] text-foreground underline underline-offset-4"
-                  >
-                    {SITE.email}
-                  </a>
+                  I&apos;ll get back to you soon. Thank you for reaching out!
                 </p>
                 <button
                   onClick={reset}
@@ -195,8 +206,18 @@ export function Contact() {
                 <button
                   type="submit"
                   className="btn-primary w-full font-mono text-sm sm:w-auto"
+                  disabled={loading}
                 >
-                  Send Message <Send size={14} />
+                  {loading ? (
+                    <>
+                      <Loader2 size={14} className="animate-spin mr-2" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message <Send size={14} />
+                    </>
+                  )}
                 </button>
               </form>
             )}
