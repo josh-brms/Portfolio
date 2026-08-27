@@ -12,6 +12,10 @@ import {
   Wrench,
   BookOpen,
   Fingerprint,
+  GitBranch,
+  Gamepad2,
+  FlaskConical,
+  Globe,
 } from "lucide-react";
 
 export const SITE = {
@@ -66,8 +70,8 @@ export const TYPING_PHRASES = [
 ];
 
 export const HERO_STATS = [
-  { value: 3, suffix: "", label: "Projects Shipped" },
-  { value: 13, suffix: "+", label: "Technologies" },
+  { value: 9, suffix: "", label: "Projects Shipped" },
+  { value: 15, suffix: "+", label: "Technologies" },
   { value: 100, suffix: "%", label: "Commitment" },
 ] as const;
 
@@ -80,6 +84,13 @@ export const HERO_SKILLS = [
   "Vercel",
   "PostgreSQL",
   "Vite",
+  "Three.js",
+  "Expo",
+  "React Native",
+  "C++",
+  "Git",
+  "HTML/CSS",
+  "JavaScript",
 ];
 
 export const HERO_SKILL_TOKENS: AccentToken[] = [
@@ -89,6 +100,15 @@ export const HERO_SKILL_TOKENS: AccentToken[] = [
   "coral",
   "orchid",
   "green",
+  "accent2",
+  "accent",
+  "teal",
+  "coral",
+  "gold",
+  "orchid",
+  "green",
+  "accent2",
+  "teal",
 ];
 
 export interface AboutItem {
@@ -203,6 +223,67 @@ export const SMALL_PROJECTS: SmallProject[] = [
       { label: "GitHub", href: "https://github.com/josh-brms/Portfolio" },
     ],
   },
+  {
+    icon: GitBranch,
+    title: "ACO Mission Control",
+    desc: "Interactive WebGL simulation of Ant Colony Optimization algorithms for thesis research. Real-time visualization of pheromone dynamics, entropy, and convergence across multiple algorithm variants.",
+    tech: ["TypeScript", "Three.js", "Vite", "Web Workers", "Vitest"],
+    techTokens: ["teal", "accent", "gold", "orchid", "coral"],
+    links: [
+      { label: "Live Demo", href: "https://aco-mission-control.vercel.app" },
+      { label: "GitHub", href: "https://github.com/josh-brms/aco-mission-control" },
+    ],
+  },
+  {
+    icon: Gamepad2,
+    title: "Fish Inventory",
+    desc: "Cross-platform fish inventory management app built with Expo and React Native. Features local-first data, offline sync, and intuitive species tracking for aquarists.",
+    tech: ["Expo", "React Native", "TypeScript", "SQLite", "EAS"],
+    techTokens: ["accent", "teal", "green", "coral", "orchid"],
+    links: [
+      { label: "GitHub", href: "https://github.com/josh-brms/fish-inventory" },
+    ],
+  },
+  {
+    icon: FlaskConical,
+    title: "CS ELEC 3 Projects",
+    desc: "Course projects including a C++ Snake game, Rock-Paper-Scissors, and Tic-Tac-Toe implementations. Demonstrates fundamental algorithms and game logic.",
+    tech: ["C++", "Git", "GitHub"],
+    techTokens: ["gold", "teal", "accent"],
+    links: [
+      { label: "GitHub", href: "https://github.com/josh-brms/CS-ELEC-3" },
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Cyrene Portfolio",
+    desc: "Single-page portfolio website showcasing creative work with modern HTML/CSS design. Clean, responsive layout for personal branding.",
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    techTokens: ["coral", "orchid", "gold"],
+    links: [
+      { label: "GitHub", href: "https://github.com/josh-brms/cy_portfolio" },
+    ],
+  },
+  {
+    icon: Gamepad2,
+    title: "Super Mario C++ Clone",
+    desc: "Faithful Super Mario Bros recreation in C++ with original assets, physics, and level design. Features complete worlds 1-8 with authentic gameplay mechanics.",
+    tech: ["C++", "SDL2", "CMake", "Git"],
+    techTokens: ["gold", "teal", "accent", "coral"],
+    links: [
+      { label: "GitHub", href: "https://github.com/josh-brms/supermario" },
+    ],
+  },
+  {
+    icon: Globe,
+    title: "Patrees Website",
+    desc: "Custom HTML/JavaScript website for Patrees brand. Single-page design with interactive elements and responsive layout.",
+    tech: ["HTML5", "CSS3", "JavaScript"],
+    techTokens: ["coral", "orchid", "gold"],
+    links: [
+      { label: "GitHub", href: "https://github.com/josh-brms/Patreeswebsite" },
+    ],
+  },
 ];
 
 export interface SkillCategory {
@@ -304,6 +385,13 @@ export const TIMELINE: TimelineEntry[] = [
     sub: "Personal Full-Stack Project",
     desc: "Designed and shipped a complete hotel management platform — from database schema to live Vercel deployment — solving a real operational problem.",
     token: "gold",
+  },
+  {
+    year: "2026",
+    title: "Thesis Research — ACO Optimization",
+    sub: "Ant Colony Optimization WebGL Simulation",
+    desc: "Built an interactive WebGL simulation to visualize and benchmark ACO algorithm variants. Real-time pheromone dynamics, entropy tracking, and convergence analysis for academic research.",
+    token: "orchid",
   },
   {
     year: "2026",
