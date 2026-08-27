@@ -14,7 +14,7 @@ import {
   Fingerprint,
   GitBranch,
   Gamepad2,
-  FlaskConical,
+  ClipboardCheck,
   Globe,
 } from "lucide-react";
 
@@ -70,7 +70,7 @@ export const TYPING_PHRASES = [
 ];
 
 export const HERO_STATS = [
-  { value: 9, suffix: "", label: "Projects Shipped" },
+  { value: 7, suffix: "", label: "Projects Shipped" },
   { value: 15, suffix: "+", label: "Technologies" },
   { value: 100, suffix: "%", label: "Commitment" },
 ] as const;
@@ -245,13 +245,13 @@ export const SMALL_PROJECTS: SmallProject[] = [
     ],
   },
   {
-    icon: FlaskConical,
-    title: "CS ELEC 3 Projects",
-    desc: "Course projects including a C++ Snake game, Rock-Paper-Scissors, and Tic-Tac-Toe implementations. Demonstrates fundamental algorithms and game logic.",
-    tech: ["C++", "Git", "GitHub"],
-    techTokens: ["gold", "teal", "accent"],
+    icon: ClipboardCheck,
+    title: "Docent — Document Reviewer Quiz",
+    desc: "Interactive quiz application for document reviewers with RPM packaging for Fedora. Features timed assessments, scoring, and result tracking for certification workflows.",
+    tech: ["HTML5", "CSS3", "JavaScript", "Vite", "RPM"],
+    techTokens: ["gold", "teal", "accent", "coral"],
     links: [
-      { label: "GitHub", href: "https://github.com/josh-brms/CS-ELEC-3" },
+      { label: "GitHub", href: "https://github.com/josh-brms/docent" },
     ],
   },
   {
@@ -272,16 +272,6 @@ export const SMALL_PROJECTS: SmallProject[] = [
     techTokens: ["gold", "teal", "accent", "coral"],
     links: [
       { label: "GitHub", href: "https://github.com/josh-brms/supermario" },
-    ],
-  },
-  {
-    icon: Globe,
-    title: "Patrees Website",
-    desc: "Custom HTML/JavaScript website for Patrees brand. Single-page design with interactive elements and responsive layout.",
-    tech: ["HTML5", "CSS3", "JavaScript"],
-    techTokens: ["coral", "orchid", "gold"],
-    links: [
-      { label: "GitHub", href: "https://github.com/josh-brms/Patreeswebsite" },
     ],
   },
 ];
