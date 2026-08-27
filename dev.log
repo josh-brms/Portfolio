@@ -1,0 +1,65 @@
+
+> portfolio@2.0.0 dev
+> next dev
+
+   ▲ Next.js 15.5.23
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.122:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3.5s
+ ○ Compiling /api/contact ...
+ ✓ Compiled /api/contact in 1978ms (313 modules)
+RESEND_API_KEY present: true
+Attempting to send email via Resend...
+Resend result: {
+  data: { id: '830a7474-6693-46d2-a9c7-b89e8edd108d' },
+  error: null,
+  headers: {
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': 'a31c1cae7eee6b9e-SIN',
+    connection: 'keep-alive',
+    'content-length': '45',
+    'content-type': 'application/json',
+    date: 'Thu, 27 Aug 2026 15:29:29 GMT',
+    'ratelimit-limit': '10',
+    'ratelimit-policy': '10;w=1',
+    'ratelimit-remaining': '9',
+    'ratelimit-reset': '1',
+    server: 'cloudflare',
+    'x-resend-daily-quota': '3',
+    'x-resend-monthly-quota': '3'
+  }
+}
+ POST /api/contact 200 in 3045ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.5s (1614 modules)
+ GET / 200 in 5389ms
+ ○ Compiling /icon.svg ...
+ ✓ Compiled /icon.svg in 1258ms (889 modules)
+ GET /icon.svg?6936180ca85fe448 200 in 1537ms
+ ○ Compiling /api/contact ...
+ ✓ Compiled /api/contact in 699ms (909 modules)
+RESEND_API_KEY present: true
+Attempting to send email via Resend...
+Resend result: {
+  data: { id: '3b31a7ac-9bfd-4f3a-ac10-6d615daf1925' },
+  error: null,
+  headers: {
+    'cf-cache-status': 'DYNAMIC',
+    'cf-ray': 'a31c2181481faa81-SIN',
+    connection: 'keep-alive',
+    'content-length': '45',
+    'content-type': 'application/json',
+    date: 'Thu, 27 Aug 2026 15:32:47 GMT',
+    'ratelimit-limit': '10',
+    'ratelimit-policy': '10;w=1',
+    'ratelimit-remaining': '9',
+    'ratelimit-reset': '1',
+    server: 'cloudflare',
+    'x-resend-daily-quota': '4',
+    'x-resend-monthly-quota': '4'
+  }
+}
+ POST /api/contact 200 in 1610ms
