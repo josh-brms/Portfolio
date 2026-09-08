@@ -69,7 +69,7 @@ export function Contact() {
   };
 
   const inputCls =
-    "w-full rounded-md border border-line bg-background2 px-4 py-3 font-mono text-sm outline-none transition-all placeholder:text-faint focus:border-line-strong focus:ring-2 focus:ring-foreground/10";
+    "w-full rounded-md border border-line bg-background2 px-4 py-3 font-mono text-base outline-none transition-all placeholder:text-faint focus:border-line-strong focus:ring-2 focus:ring-foreground/10 sm:text-sm";
 
   return (
     <section id="contact" className="border-t border-line bg-background2 py-24 md:py-32">
@@ -90,11 +90,11 @@ export function Contact() {
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded-md border border-line bg-background3 text-muted">
                     <Icon size={17} strokeWidth={1.5} />
                   </span>
-                  <span>
+                  <span className="min-w-0">
                     <span className="block font-mono text-[10px] uppercase tracking-[0.18em] text-faint">
                       {m.label}
                     </span>
-                    <span className="mt-0.5 block text-sm text-foreground">
+                    <span className="mt-0.5 block break-words text-sm text-foreground">
                       {m.value}
                     </span>
                   </span>

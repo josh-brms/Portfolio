@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { Command, Menu, X, Github } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/data";
@@ -19,6 +20,13 @@ export function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   useEffect(() => {
     const sections = NAV_LINKS.map((l) =>
@@ -52,16 +60,20 @@ export function Nav() {
         <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight"
-            aria-label="Back to top"
+            className="flex shrink-0 items-center gap-2.5 font-display text-lg font-extrabold tracking-tight sm:text-xl"
+            aria-label="Joshua Bermas — back to top"
           >
-            <img
+            <Image
               src="/logo.png"
-              alt="JoshStudio"
-              className="h-10 w-10 object-contain"
+              alt="JB monogram logo"
+              width={32}
+              height={32}
+              draggable={false}
+              className="h-8 w-8 object-contain light:invert"
             />
-            <span className="text-accent2">.</span>
-            <span>JoshStudio</span>
+            <span className="whitespace-nowrap">
+              Joshua<span className="text-accent2">.</span> Bermas
+            </span>
           </button>
 
           <ul className="hidden items-center gap-7 md:flex">
@@ -128,8 +140,18 @@ export function Nav() {
             className="fixed inset-0 z-[8500] flex flex-col bg-background/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex h-16 items-center justify-between px-5">
-              <span className="font-display text-xl font-extrabold">
-                JB<span className="text-accent2">.</span>
+              <span className="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight sm:text-xl">
+                <Image
+                  src="/logo.png"
+                  alt="JB monogram logo"
+                  width={32}
+                  height={32}
+                  draggable={false}
+                  className="h-8 w-8 object-contain light:invert"
+                />
+                <span className="whitespace-nowrap">
+                  Joshua<span className="text-accent2">.</span> Bermas
+                </span>
               </span>
               <button
                 onClick={() => setMenuOpen(false)}

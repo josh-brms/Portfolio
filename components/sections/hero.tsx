@@ -44,7 +44,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pb-20 pt-28"
+      className="relative flex min-h-svh items-center overflow-hidden pb-20 pt-28"
     >
       <div className="pointer-events-none absolute -left-40 top-[-120px] h-[480px] w-[480px] rounded-full bg-foreground/[0.04] blur-[110px]" />
       <div className="pointer-events-none absolute -right-32 bottom-[-140px] h-[420px] w-[420px] rounded-full bg-foreground/[0.03] blur-[110px]" />
@@ -101,7 +101,7 @@ export function Hero() {
             </Magnetic>
           </div>
 
-          <div className="mt-12 flex gap-10 border-t border-line pt-8">
+          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-line pt-8 sm:gap-x-10">
             {HERO_STATS.map((s) => (
               <div key={s.label}>
                 <AnimatedNumber
@@ -119,12 +119,8 @@ export function Hero() {
 
         <TiltCard maxAngle={6}>
           <SpotlightCard className="rounded-lg border border-line bg-surface/80 p-8 backdrop-blur-md">
-            <div className="mx-auto mb-5 flex h-24 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight relative group">
-              <img
-                src="/profile.jpg"
-                alt="JoshStudio"
-                className="h-full w-full rounded-lg object-cover transition-all duration-500 ease-out group-hover:scale-[2.2] group-hover:rounded-none group-hover:z-10 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] group-hover:rotate-[-2deg]"
-              />
+            <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight">
+              JB
             </div>
             <p className="text-center font-display text-lg font-bold">
               Joshua Bermas
