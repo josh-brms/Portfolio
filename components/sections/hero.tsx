@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useReducedMotion } from "motion/react";
 import { useTheme } from "next-themes";
@@ -119,9 +120,15 @@ export function Hero() {
 
         <TiltCard maxAngle={6}>
           <SpotlightCard className="rounded-lg border border-line bg-surface/80 p-8 backdrop-blur-md">
-            <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight">
-              JB
-            </div>
+            <Image
+              src="/profile.jpg"
+              alt="Joshua Bermas"
+              width={80}
+              height={80}
+              priority
+              draggable={false}
+              className="mx-auto mb-5 h-20 w-20 rounded-lg border border-line-strong object-cover object-top"
+            />
             <p className="text-center font-display text-lg font-bold">
               Joshua Bermas
             </p>
