@@ -1,9 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useReducedMotion, motion } from "motion/react";
+import { useReducedMotion } from "motion/react";
 import { useTheme } from "next-themes";
 import { ArrowRight, Download } from "lucide-react";
 import {
@@ -120,23 +119,13 @@ export function Hero() {
 
         <TiltCard maxAngle={6}>
           <SpotlightCard className="rounded-lg border border-line bg-surface/80 p-8 backdrop-blur-md">
-            <motion.div
-              initial={reduce ? false : { opacity: 0, scale: 0.7, rotate: -4 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ type: "spring", stiffness: 240, damping: 16, delay: 0.2 }}
-              whileHover={reduce ? undefined : { scale: 1.07, rotate: 2 }}
-              className="mx-auto mb-5 w-fit"
-            >
-              <Image
+            <div className="mx-auto mb-5 flex h-24 w-20 items-center justify-center rounded-lg border border-line-strong bg-background3 font-display text-2xl font-extrabold tracking-tight relative group">
+              <img
                 src="/profile.jpg"
-                alt="Joshua Bermas"
-                width={80}
-                height={80}
-                priority
-                draggable={false}
-                className="h-20 w-20 rounded-lg border border-line-strong object-cover object-top"
+                alt="JoshStudio"
+                className="h-full w-full rounded-lg object-cover transition-all duration-500 ease-out group-hover:scale-[2.2] group-hover:rounded-none group-hover:z-10 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)] group-hover:rotate-[-2deg]"
               />
-            </motion.div>
+            </div>
             <p className="text-center font-display text-lg font-bold">
               Joshua Bermas
             </p>
