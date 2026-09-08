@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useReducedMotion } from "motion/react";
+import { useReducedMotion, motion } from "motion/react";
 import { useTheme } from "next-themes";
 import { ArrowRight, Download } from "lucide-react";
 import {
@@ -120,15 +120,23 @@ export function Hero() {
 
         <TiltCard maxAngle={6}>
           <SpotlightCard className="rounded-lg border border-line bg-surface/80 p-8 backdrop-blur-md">
-            <Image
-              src="/profile.jpg"
-              alt="Joshua Bermas"
-              width={80}
-              height={80}
-              priority
-              draggable={false}
-              className="mx-auto mb-5 h-20 w-20 rounded-lg border border-line-strong object-cover object-top"
-            />
+            <motion.div
+              initial={reduce ? false : { opacity: 0, scale: 0.7, rotate: -4 }}
+              animate={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 240, damping: 16, delay: 0.2 }}
+              whileHover={reduce ? undefined : { scale: 1.07, rotate: 2 }}
+              className="mx-auto mb-5 w-fit"
+            >
+              <Image
+                src="/profile.jpg"
+                alt="Joshua Bermas"
+                width={80}
+                height={80}
+                priority
+                draggable={false}
+                className="h-20 w-20 rounded-lg border border-line-strong object-cover object-top"
+              />
+            </motion.div>
             <p className="text-center font-display text-lg font-bold">
               Joshua Bermas
             </p>
