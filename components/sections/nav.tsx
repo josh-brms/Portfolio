@@ -71,7 +71,9 @@ export function Nav() {
               draggable={false}
               className="h-8 w-8 object-contain light:invert"
             />
-            <span className="whitespace-nowrap">Joshua Bermas</span>
+                <span className="whitespace-nowrap">
+                  JB<span className="text-accent2">.</span>
+                </span>
           </button>
 
           <ul className="hidden items-center gap-7 md:flex">
@@ -147,7 +149,7 @@ export function Nav() {
                   draggable={false}
                   className="h-8 w-8 object-contain light:invert"
                 />
-                <span className="whitespace-nowrap">Joshua Bermas</span>
+            <span className="whitespace-nowrap">JoshStudio</span>
               </span>
               <button
                 onClick={() => setMenuOpen(false)}
